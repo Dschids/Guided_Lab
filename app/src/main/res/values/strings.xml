@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Guided Lab</string>
+    <string name="login">Login:</string>
+    <string name="loginHint">Enter User Name</string>
+    <string name="password">Password:</string>
+    <string name="passwordHint">Enter Password</string>
+    <string name="loginBtnText">Login</string>
+    <string name="errMsgLogin">Invalid login, please retry</string>
+    <string name="errMsgPassword">Invalid password, please retry</string>
+</resources>

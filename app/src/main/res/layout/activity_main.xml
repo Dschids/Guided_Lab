@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/idEdtTxtPassword"
+        android:layout_width="268dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/idTxtVwPassword"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtUserName" />
+
+    <TextView
+        android:id="@+id/idTxtVwLogin"
+        android:layout_width="71dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/login"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/loginBtnText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtPassword" />
+
+    <TextView
+        android:id="@+id/idTxtVwPassword"
+        android:layout_width="120dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/password"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtVwLogin" />
+
+    <EditText
+        android:id="@+id/idEdtTxtUserName"
+        android:layout_width="277dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="@string/loginHint"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/idTxtVwLogin"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/idImgMccLogo"
+        android:layout_width="360dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/mcc_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
