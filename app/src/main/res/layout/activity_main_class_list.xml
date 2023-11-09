@@ -4,6 +4,210 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainClassList">
+    tools:context=".MainClassList"
+    tools:layout_editor_absoluteX="-14dp"
+    tools:layout_editor_absoluteY="0dp">
 
+    <TextView
+        android:id="@+id/idTxtFirstNameLabel"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/firstName"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtTxtFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/idTxtLastNameLabel"
+        android:layout_width="78dp"
+        android:layout_height="20dp"
+        android:text="@string/lastName"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtTxtLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toEndOf="@+id/idTxtFirstNameLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <EditText
+        android:id="@+id/idEdtTxtLastName"
+        android:layout_width="186dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toEndOf="@+id/idEdtTxtFirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEdtTxtFirstName"
+        android:layout_width="186dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEdtTxtPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtFirstName" />
+
+    <TextView
+        android:id="@+id/idTxtPhoneNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/phone"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtTxtPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtFirstName"
+        app:layout_constraintVertical_bias="0.214" />
+
+    <TextView
+        android:id="@+id/idTxtDob"
+        android:layout_width="82dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/dob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtPhoneNumber" />
+
+    <EditText
+        android:id="@+id/idEdtTxtYear"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="@string/year"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtPhoneNumber" />
+
+    <EditText
+        android:id="@+id/idEdtTxtDay"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/day"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/idEdtTxtYear"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtPhoneNumber" />
+
+    <Spinner
+        android:id="@+id/idSpnrMonth"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/listMonth"
+        app:layout_constraintEnd_toStartOf="@+id/idEdtTxtDay"
+        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtDob" />
+
+    <TextView
+        android:id="@+id/idTxtCertSwLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/certificate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtDay" />
+
+    <TextView
+        android:id="@+id/idTxtAssociatesSwLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/associates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtDay" />
+
+    <Switch
+        android:id="@+id/idSwDegreeCert"
+        android:layout_width="381dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="76dp"
+        android:checked="true"
+        android:textOff="@string/certificate"
+        android:textOn="@string/associates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtTxtDay" />
+
+    <Spinner
+        android:id="@+id/idSpnrCert"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/listCert"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtCertSpnrLabel" />
+
+    <Spinner
+        android:id="@+id/idSpnrMajor"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/listMajor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTxtMajorSpnrLabel" />
+
+    <TextView
+        android:id="@+id/idTxtCertSpnrLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/certificate"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSwDegreeCert" />
+
+    <TextView
+        android:id="@+id/idTxtMajorSpnrLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/strMajor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSwDegreeCert" />
+
+    <Button
+        android:id="@+id/idBtnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:text="@string/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSwDegreeCert" />
 </androidx.constraintlayout.widget.ConstraintLayout>

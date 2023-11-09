@@ -1,5 +1,6 @@
 package com.example.guidedlab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val txtLogin = findViewById<EditText>(R.id.idEdtTxtUserName)
         val txtPassword = findViewById<EditText>(R.id.idEdtTxtPassword)
         val btnLogin = findViewById<Button>(R.id.idBtnLogin)
+        val nextScreen = Intent(this@MainActivity, MainClassList::class.java)
 
         btnLogin.setOnClickListener {
             when (CheckLogin(txtLogin.text.toString(), txtPassword.text.toString())) {
@@ -37,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 else ->
-                    Toast.makeText(applicationContext, "That's the combination an idiot would put on his luggage", Toast.LENGTH_LONG).show()
+                    startActivity(nextScreen)
             }
         }
     }
