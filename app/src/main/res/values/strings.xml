@@ -47,8 +47,8 @@
     <string name="class3">MAD-157: iOS II</string>
     <string name="class4">MAD-257: Capstone Mobile Class</string>
 
-    <string name="timeRb1">T/Th. 12:00 PM - 1:50 PM</string>
-    <string name="timeRb2">M/w 10:00 AM - 11:50 AM</string>
+    <string name="timeRb1">M/W 10:00 AM - 11:50 AM</string>
+    <string name="timeRb2">T/Th 12:00 PM - 1:50 PM</string>
     <string name="timeRb3">T/Th 12:00 PM - 1:50 PM</string>
     <string name="timeRb4">T/Th 4:00 PM - 5:50 PM</string>
     <string name="timeRb5">F 9:00 AM. - 12:50 PM</string>

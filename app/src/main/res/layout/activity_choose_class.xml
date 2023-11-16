@@ -23,7 +23,7 @@
         android:layout_width="372dp"
         android:layout_height="45dp"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="20dp"
         android:checkMark="?android:attr/textCheckMark"
         android:gravity="center_vertical"
@@ -35,24 +35,25 @@
         app:layout_constraintTop_toBottomOf="@+id/idTxtSelect" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/idRgMad107"
         android:layout_width="345dp"
         android:layout_height="74dp"
         android:layout_marginStart="42dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/idCtvMad155"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idCtvMad107">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/idRb1"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:text="@string/timeRb1" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/idRb2"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:text="@string/timeRb2" />
@@ -63,6 +64,7 @@
         android:layout_width="379dp"
         android:layout_height="43dp"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="17dp"
         android:checkMark="?android:attr/textCheckMark"
         android:gravity="center_vertical"
@@ -71,106 +73,116 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="200dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="350dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/idCtvMad157"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idCtvMad155">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="@string/timeRb1" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="@string/timeRb2" />
-
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/idRgMad107" />
 
     <CheckedTextView
         android:id="@+id/idCtvMad157"
         android:layout_width="379dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
         android:checkMark="?android:attr/textCheckMark"
         android:gravity="center_vertical"
         android:text="@string/class3"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="328dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="350dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginEnd="19dp"
-        app:layout_constraintBottom_toTopOf="@+id/idCtvMad257"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idCtvMad157">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="@string/timeRb1" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="@string/timeRb2" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/idRgMad155" />
 
     <CheckedTextView
         android:id="@+id/idCtvMad257"
         android:layout_width="379dp"
         android:layout_height="43dp"
         android:layout_marginStart="13dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="19dp"
         android:checkMark="?android:attr/textCheckMark"
         android:gravity="center_vertical"
-        android:text="@string/class1"
+        android:text="@string/class4"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="468dp" />
+        app:layout_constraintTop_toBottomOf="@+id/idRgMad157" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="353dp"
+        android:id="@+id/idRgMad155"
+        android:layout_width="345dp"
         android:layout_height="74dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCtvMad155" >
+
+        <RadioButton
+            android:id="@+id/idRb3"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/timeRb3" />
+
+        <RadioButton
+            android:id="@+id/idRb4"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/timeRb4" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/idRgMad157"
+        android:layout_width="345dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCtvMad157" >
+
+        <RadioButton
+            android:id="@+id/idRb5"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/timeRb5" />
+
+        <RadioButton
+            android:id="@+id/idRb6"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/timeRb6" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/idRGMad257"
+        android:layout_width="345dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idCtvMad257">
 
         <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:text="@string/timeRb1" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/idRb7"
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:text="@string/timeRb2" />
+
+        <RadioButton
+            android:id="@+id/idRb8"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/timeRb5" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/idBtnChooseClassNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idRGMad257" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
