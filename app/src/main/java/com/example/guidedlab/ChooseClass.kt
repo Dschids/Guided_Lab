@@ -1,11 +1,14 @@
 package com.example.guidedlab
 
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckedTextView
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 
 class ChooseClass : AppCompatActivity() {
 
@@ -101,19 +104,188 @@ class ChooseClass : AppCompatActivity() {
                 ctv3Text = ctv3!!.text.toString()
                 selectedTime1 = rg3!!.checkedRadioButtonId
                 radioButton = findViewById(selectedTime3)
-                radio1Text = radioButton.text.toString()
+                radio3Text = radioButton.text.toString()
             }
             if (ctv4!!.isChecked) {
-                ctv1Text = ctv4!!.text.toString()
+                ctv4Text = ctv4!!.text.toString()
                 selectedTime4 = rg4!!.checkedRadioButtonId
                 radioButton = findViewById(selectedTime4)
-                radio1Text = radioButton.text.toString()
+                radio4Text = radioButton.text.toString()
+            }
+
+            if (radioCheck(selectedTime1, selectedTime2, selectedTime3, selectedTime4)) {
+                val nextScreen2 = Intent(this@ChooseClass, Summary::class.java).apply {
+                    putExtra("FirstName", firstName)
+                    putExtra("LastName", lastName)
+                    putExtra("Phone", phone)
+                    putExtra("Birthday", birthDate)
+                    putExtra("IsDegreeCert", isDegreeCert)
+                    putExtra("DegreeCert", degreeCertification)
+                    putExtra("Class1", ctv1Text)
+                    putExtra("TimeSelected1", radio1Text)
+                    putExtra("Class2", ctv2Text)
+                    putExtra("TimeSelected2", radio2Text)
+                    putExtra("Class3", ctv3Text)
+                    putExtra("TimeSelected3", radio3Text)
+                    putExtra("Class4", ctv4Text)
+                    putExtra("TimeSelected1", radio4Text)
+                }
+
+                startActivity(nextScreen2)
+
+            } else {
+                Toast.makeText(applicationContext, "Time slot conflict.",Toast.LENGTH_LONG).show()
             }
         }
 
+        rb1!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
 
+        rb2!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
 
+        rb3!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
 
+        rb4!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
 
+        rb5!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
+
+        rb6!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
+
+        rb7!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
+
+        rb8!!.setOnCheckedChangeListener { buttonView, isChecked ->
+            rb1!!.error = null
+            rb2!!.error = null
+            rb3!!.error = null
+            rb4!!.error = null
+            rb5!!.error = null
+            rb6!!.error = null
+            rb7!!.error = null
+            rb8!!.error = null
+        }
+
+        ctv1!!.setOnClickListener {
+            if (ctv1!!.isChecked){
+                enableDisable(ctv1, rb1, rb2, Color.WHITE, false)
+            }else
+                enableDisable(ctv1, rb1, rb2, Color.GRAY, true)
+        }
+
+        ctv2!!.setOnClickListener {
+            if (ctv2!!.isChecked){
+                enableDisable(ctv2, rb3, rb4, Color.WHITE, false)
+            }else
+                enableDisable(ctv2, rb3, rb4, Color.GRAY, true)
+        }
+
+        ctv3!!.setOnClickListener {
+            if (ctv3!!.isChecked){
+                enableDisable(ctv3, rb5, rb6, Color.WHITE, false)
+            }else
+                enableDisable(ctv3, rb5, rb6, Color.GRAY, true)
+        }
+
+        ctv4!!.setOnClickListener {
+            if (ctv4!!.isChecked){
+                enableDisable(ctv4, rb7, rb8, Color.WHITE, false)
+            }else
+                enableDisable(ctv4, rb7, rb8, Color.GRAY, true)
+        }
+
+    }
+
+    fun enableDisable(ctv: CheckedTextView?, rb1: RadioButton?, rb2: RadioButton?, bgColor: Int?, state: Boolean?){
+        ctv!!.isChecked = state!!
+        ctv.setBackgroundColor(bgColor!!)
+        rb1!!.isEnabled = state
+        rb2!!.isEnabled = state
+
+        rb1!!.isChecked = state
+
+        if (!state){
+            rb2.isChecked = state
+        }
+
+    }
+    fun radioCheck(selectedTime1: Int, selectedTime2: Int, selectedTime3: Int, selectedTime4: Int): Boolean{
+
+        if (selectedTime1 == R.id.idRb2 && selectedTime2 == R.id.idRb3){
+            rb2!!.error = "Time slot conflict!"
+            rb3!!.error = "Time slot conflict!"
+            return false
+        }
+        if (selectedTime1 == R.id.idRb1 && selectedTime4 == R.id.idRb7){
+            rb1!!.error = "Time slot conflict!"
+            rb7!!.error = "Time slot conflict!"
+            return false
+        }
+        if (selectedTime3 == R.id.idRb5 && selectedTime4 == R.id.idRb8){
+            rb5!!.error = "Time slot conflict!"
+            rb8!!.error = "Time slot conflict!"
+            return false
+        }
+        return true
     }
 }
